@@ -1,0 +1,120 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+#login{
+	float:right;
+	margin-right:30px;
+	margin-top : 10px;	
+	width:420px;
+}
+#login:after{
+	content:"";
+	display : block;
+	clear : both;
+}
+
+#wrap #table{
+	margin: 30px auto;
+	margin-top: 10px;
+	margin-bottom: 30px;
+	width: 800px;
+	margin-left:100px;
+}
+
+#title{
+	margin:0 auto;
+	padding:10px;
+	text-align:center;
+}
+#table .line{
+	margin:0 auto;
+	padding:0;
+	background-color:white;	
+}
+#table .line .number{
+	display:inline-block;
+	width:50px;
+	height:35px;
+	margin:0;
+	line-height:35px;
+	vertical-align:text-top;
+}
+#table .line .contents{
+	display:inline-block;
+	width:50%;
+	height:35px;
+	margin:0;
+	line-height:35px;
+	vertical-align:text-top;
+}
+#table .line .contents input{
+	background-color:white;
+	width:100%;
+	border:none;
+	padding:0;
+	text-align:left;
+	line-height:35px;
+}
+#table .line .contents a{
+	text-decoration-line:none;
+	color:black;	
+}
+#table .line .time{
+	display:inline-block;
+	width:50px;
+	height:35px;
+	margin:0;
+	line-height:35px;
+	vertical-align:text-top;
+}
+#table .line .who{
+	display:inline-block;
+	width:100px;
+	height:35px;
+	margin:0;
+	line-height:35px;
+	vertical-align:text-top;
+}
+#table .line .view{
+	display:inline-block;
+	width:50px;
+	height:35px;
+	margin:0;
+	line-height:35px;
+	vertical-align:text-top;
+}
+#wrap #page{
+	margin-left:400px;
+	margin-bottom: 30px;
+}
+#wrap #page a{
+	text-decoration-line:none;
+	color:black;		
+}
+
+textarea{	
+	width:750px;
+	height:450px;
+	background-color:white;
+	margin-top:20px;
+	margin-left: 100px;
+	margin-bottom:20px;
+	padding:20px;
+}
+#content .bbb{
+	margin-left: 450px;
+}
+#con_title{
+	margin-left : 100px;
+	margin-top : 30px;
+}
+#con_title input{
+	width:742px;
+	height:20px;
+}
+
+img{
+	width:960px;
+	margin:10px;
+	padding : 10px;
+}
