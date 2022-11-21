@@ -145,8 +145,7 @@ public class MemberDAO {
 			pstmt.setString(3, m.getEmail());
 			pstmt.setString(4, m.getAddress());
 			pstmt.setString(5, m.getRace());
-			pstmt.setInt(6, m.getAge());
-			pstmt.setString(7, m.getGrade());			
+			pstmt.setInt(6, m.getAge());			
 			result = pstmt.executeUpdate(); //변경된 수가 리턴 1 반환
 					
 		}catch(Exception e) {

@@ -73,8 +73,8 @@ public class show_content extends HttpServlet {
 				System.out.println("show_content 접속 종료 중 오류발생 : "+ex);
 			}
 		}
-		request.setAttribute("review",r);
-		RequestDispatcher dis = request.getRequestDispatcher("content.jsp");
+		request.setAttribute("noti",r);
+		RequestDispatcher dis = request.getRequestDispatcher("content_noti.jsp");
 		dis.forward(request, response);
 	}
 

@@ -23,9 +23,7 @@ public class ReadHospitalServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		//currentPage : 사용자가 현재 보고 있는 페이지번호
 				//recordsPerPage : 한 페이지에 보여줄 자료의 개수
-				String search = request.getParameter("search");
-//				System.out.println(search);
-				//int currentPage =1;
+				String search = request.getParameter("search");//				
 				int currentPage = Integer.parseInt(request.getParameter("currentPage"));
 					
 				int recordsPerPage=5;
@@ -36,7 +34,6 @@ public class ReadHospitalServlet extends HttpServlet {
 				
 				AllDAO aDAO = AllDAO.getInstance();
 				int row = aDAO.getNumberOfRows("hospital", search); //총 자료의 갯수를 가져와서 변수에 저장
-//				int row = hDAO.getNumberOfRows(search); //총 자료의 갯수를 가져와서 변수에 저장
 				int nOfPage=row/recordsPerPage;	//전체 페이지를 보여줄 페이지 수로 저장
 				if(row%recordsPerPage>0) {
 					nOfPage++;					//만약 자료 갯수가 나머지가 있는 경우 한 페이지 추가

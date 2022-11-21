@@ -13,9 +13,9 @@ public class AllDAO {
 	}
 	public Connection getConnection() throws Exception{
 		Connection conn=null;
-		String url="jdbc:mysql://127.0.0.1:3306/cat";
+		String url="jdbc:mysql://localhost:3306/cat";
 		String db_id="root";
-		String db_pw="iotiot";
+		String db_pw="rlaxogml1";
 		Class.forName("com.mysql.cj.jdbc.Driver");
 		conn=DriverManager.getConnection(url,db_id,db_pw);	
 		
