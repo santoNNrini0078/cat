@@ -22,6 +22,7 @@
 			int i = 15;
 			int j = 1;
 		%>
+			<li><a href="index.jsp" id="blank_login">홈</a></li>
 			<li><a href="hospital.jsp">고양이 병원 찾기</a></li>
 			<li><a href="pharm.jsp">동물 약국</a></li>
 			<li><a href="bye.jsp">무지개 다리 건널 때</a></li>
@@ -31,8 +32,7 @@
 		</ul>
 	</nav>
 </div>
-<script>
-	//화면을 지우고 표시하고 싶다요
+<script>	
 	var id="${loginUser}";
 	var grade="${grade}";
 	console.log(id);
@@ -40,30 +40,37 @@
 	var div = document.getElementById("login");
 	console.log(div);
 	
+	var div2 = document.getElementsByTagName("li");
+	console.log(div2);
+	
 	if(id.length!=0){		
 		var tag1 = document.getElementsByTagName("a")[1];
 		var tag2 = document.getElementsByTagName("a")[2];
 		console.log(tag1);
 		console.log(tag2);
 		
+		var tag3 = document.getElementsByTagName("li")[6];
+		console.log(tag3);
+		
 		tag1.removeChild(tag1.childNodes[0]);
 		tag2.removeChild(tag2.childNodes[0]);
+		tag3.removeChild(tag3.childNodes[0]);
 	
 		var text = document.createTextNode(id+"님이 로그인 하였습니다. ");
-		div.appendChild(text);
-				
-		div.innerHTML+='<span id="logout"><a href="#">로그아웃</a></span>';	
+		div.appendChild(text);	
 		
-		document.getElementById("logout").onclick=function(){
-			document.logout.submit();
-		}
 		if(grade==0){
-			div.innerHTML+='<span id="manage"><a href="admin.jsp">관리</a></span>';
-			
-			
+			div.innerHTML+='<span id="manage"><a href="admin.jsp">관리</a></span>';			
 		}
-	}
-	
 		
+		div.innerHTML+='<span id="logout"><a href="#">로그아웃</a></span>';
+		div2[6].innerHTML+='<span id="logout2"><a href="logout">로그아웃</a></span>';					
+				
+		document.getElementById("logout").onclick=function(){
+			document.logout.submit();	
+		}
+		document.getElementById("logout2").onclick=function(){
+			document.logout.submit();	
+		}		
+	}		
 </script>
-

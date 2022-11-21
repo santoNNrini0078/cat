@@ -30,57 +30,62 @@
 						var spl=fr.result.split("\n");	
 										
 						document.write("<table><tr> <td>name</td> <td>tel</td> <td>add</td> <td>add2</td> <td>x</td> <td>y</td> <td>stat</td> </tr>")
-						for(i=1; i<spl.length-1; i++){													
-												
-							var spl2=spl[i].split("@");
-							
-							var Hospital = new Object();
 						
-							Hospital.name=spl2[21]; //사업장명
-							Hospital.tel=spl2[15]; //소재지전화
-							Hospital.add=spl2[18]; //소재지전체주소
-							Hospital.add2=spl2[19]; //도로명전체주소
-							Hospital.x=spl2[26];	//좌표정보(x)
-							Hospital.y=spl2[27]; //좌표정보(y)
-							Hospital.stat=spl2[10]; //상세영업상태명	
+							i=9001;
+							n=i;
+							k=n+1000;
+						
+							for(n; i<k; i++){													
+								
+								var spl2=spl[i].split("@");
+								
+								var Hospital = new Object();
 							
-							var obj = {
-									name : Hospital.name,
-									tel : Hospital.tel,
-									add : Hospital.add,
-									add2 : Hospital.add2,
-									x : Hospital.x,
-									y : Hospital.y,
-									stat : Hospital.stat
-							}																												
-							
-							let json = JSON.stringify(obj);
-							document.write(json+"<br>");
-							console.log(json);
-							
-							$.ajax({
-								type: "post",
-								url : "Hospital",
-								headers : {'Content-Type':'application/json'},
-								data : json,
-								success : function(data){	
-									console.log("성공");
-								},
-								error :function(e){									
+								Hospital.name=spl2[21]; //사업장명
+								Hospital.tel=spl2[15]; //소재지전화
+								Hospital.add=spl2[18]; //소재지전체주소
+								Hospital.add2=spl2[19]; //도로명전체주소
+								Hospital.x=spl2[26];	//좌표정보(x)
+								Hospital.y=spl2[27]; //좌표정보(y)
+								Hospital.stat=spl2[10]; //상세영업상태명	
+								
+								var obj = {
+										name : Hospital.name,
+										tel : Hospital.tel,
+										add : Hospital.add,
+										add2 : Hospital.add2,
+										x : Hospital.x,
+										y : Hospital.y,
+										stat : Hospital.stat
+								}																												
+								
+								let json = JSON.stringify(obj);
+//								document.write(json+"<br>");
+//								console.log(json);
+								
+								$.ajax({
+									type: "post",
+									url : "Hospital",
+									headers : {'Content-Type':'application/json'},
+									data : json,
+									success : function(data){	
+										console.log("성공");
+									},
+									error :function(e){									
+									}
+								});		
+								
+								if(i==spl.length-2){
+									break;
 								}
-							});
-																																			
-							document.write("<tr><td><input type='text' id='name' value="+spl2[21]+"></td>");
-							document.write("<td><input type='text' id='tel' value="+spl2[15]+"></td>");
-							document.write("<td><input type='text' id='add' value="+spl2[18]+"></td>");
-							document.write("<td><input type='text' id='add2' value="+spl2[19]+"></td>");
-							document.write("<td><input type='text' id='x' value="+spl2[26]+"></td>");
-							document.write("<td><input type='text' id='y' value="+spl2[27]+"></td>");
-							document.write("<td><input type='text' id='stat' value="+spl2[10]+"></td></tr>");								
+								
 							}//for 문으로 긁어온 파일 // 객체반환						
-						document.write("</table>");						
+							document.write("</table>");
+							document.write("다음");						
+						}
+											
 					} // 파일 읽어오기
-				}			
+							
 			}					
 			
 		</script>				

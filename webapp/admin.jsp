@@ -22,7 +22,9 @@
 	console.log(div);
 	
 	if(id.length!=0&&grade==0){			
-		div.innerHTML+='<form method="post" action="data"><input type="submit" id="data" value="파일 업로드"></form>';
+		div.innerHTML+='<form method="post" action="data1"><input type="submit" id="data" value="병원 파일 업로드"></form>';
+		div.innerHTML+='<form method="post" action="data2"><input type="submit" id="data" value="약국 파일 업로드"></form>';
+		div.innerHTML+='<form method="post" action="data"><input type="submit" id="data" value="장묘 파일 업로드"></form>';
 		div.innerHTML+='<form method="post" action="member"><input type="submit" id="member" value="회원관리"></form>';
 	}	
 		

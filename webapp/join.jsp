@@ -51,7 +51,7 @@
 										</tr>
 										<tr>
 											<td>고양이 나이 :</td>
-											<td><input type="text" name="age" placeholder="숫자만입력"></td>
+											<td><input type="number" name="age" placeholder="숫자만입력"></td>
 										</tr>
 										<tr>
 											<td colspan="3">
@@ -114,11 +114,6 @@
 						frm.user_id.focus();
 						return false;
 					}
-//					if(document.frm.age.value==""){
-//						alert("숫자만 입력하셔야 합니다.");
-//						frm.pass.focus();
-//						return false;
-//					}
 					return true;
 				}
 			</script>		
